@@ -1,0 +1,220 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/monokai.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h1>REVEAL.JS</h1>
+				</section>
+				<section>
+					<h2>What is it?</h2>
+					<p>A Javascript framework for building presentations</p>
+					<span class="fragment fade-down">
+						<img src="./test/assets/MJUC96rE_400x400.jpg" alt="">
+						<p>Hakim El Hattab</p>
+					</span>
+				</section>
+				<section>
+						<h3>So?</h3>
+						<ul>
+							<li class="fragment fade-right">Interactive presentations built using HTML</li>
+							<li class="fragment fade-right">Lots of built-in styling options, added simply via JS</li>
+							<li class="fragment fade-right">No web-dev skills? No problemo! <span class="fragment">Visual editor available at <a href="https://slides.com">https://slides.com</a></span></li>
+						</ul>
+				</section>
+				<section>
+					<h2>Fragments</h2>
+					<p>Used to emphasize individual elements on a slide</p>
+					<p class="fragment" data-fragment-index="0">You have already...</p>
+					<p class="fragment" data-fragment-index="1">...seen it in action...</p>
+					<p class="fragment" data-fragment-index="2">...on...</p>
+					<p class="fragment" data-fragment-index="3">...</p>
+					<p class="fragment" data-fragment-index="4">...</p>
+					<p>
+						<span class="fragment" data-fragment-index="5">.</span>
+						<span class="fragment" data-fragment-index="6">.</span>
+						<span class="fragment" data-fragment-index="7">.</span>
+					</p>
+					
+					<p class="fragment" data-fragment-index="8">slide 3!</p>
+					
+				</section>
+				<section>
+					<h3>Fragment styling: </h3>
+					<p class="fragment grow" data-fragment-index="0">Fragments can also be</p>
+					<p class="fragment shrink" data-fragment-index="1">styled</p>
+					<p class="fragment fade-in-then-semi-out" data-fragment-index="2">and</p>
+					<p class="fragment fade-left" data-fragment-index="3">ordered</p>
+					<!-- <p class="fragment fade-up" >
+						<span class="fragment fade-right" data-fragment-index="3">ordered</span>
+					</p> -->
+					<p>
+						<span class="fragment highlight-red" data-fragment-index="5">in</span>
+						<span class="fragment highlight-blue" data-fragment-index="6">de</span>
+						<span class="fragment highlight-blue" data-fragment-index="4">pendently</span>
+					</p>
+				</section>
+				<section data-transition="slide-in fade-out">
+					<section>
+						<h2>Transition styles</h2>
+						<ol class="fragment fade-right">
+							<li>Slide</li>
+							<li>Fade</li>
+							<li>Convex</li>
+							<li>Concave</li>
+							<li>Zoom</li>
+							<li>None</li>
+						</ol>
+					</section>
+					<section data-transition="slide" data-background="#90ee90" data-background-transition="zoom">
+						<!-- <h2>Vertical slides</h2> -->
+						<p>Transition styles can be applied to both slides and slide backgrounds</p>
+					</section>
+					<section data-transition="concave" data-background="#4b0082" data-background-transition="slide">
+						<!-- <p>These can be used to emphasize that you are delving deeper down</p> -->
+						<p>Transitions can also be changed per slide</p>
+					</section>
+					<section data-transition="concave">
+						<!-- <p>and down</p> -->
+						<h2>Vertical slides</h2>
+					</section>
+					<section data-transition="convex">
+						<!-- <p>into a higher level topic</p> -->
+						<p>These can be used to emphasize that you are delving deeper down</p>
+					</section>
+					<section data-transition="convex">
+						<p>and down</p>
+					</section>
+					<section data-transition="fade">
+						<p>into a higher level topic</p>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>Dynamic backgrounds</h2>
+						<ul>
+							<li>Colours</li>
+							<li>Images</li>
+							<li>Parallax</li>
+						</ul>
+					</section>
+					<section data-background="#000000" data-background-video="https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.webm" data-background-video-loop data-background-video-mute data-background-size="contain" data-autoplay>
+						<ul style="background-color: rgba(0,0,0,0.7) color: #fff position: absolute right:0">
+							<!-- <li>Colours</li>
+							<li>Images</li>
+							<li>Parallax</li> -->
+							<li class="fade-up">Video</li>
+						</ul>
+					</section>
+					<section data-background-iframe="https://save-whales.com" data-background-interactive>
+						<ul style="background-color: rgba(0,0,0,0.7) color: #fff position: absolute right:0">
+							<!-- <li>Colours</li>
+							<li>Images</li>
+							<li>Parallax</li>
+							<li>Video</li> -->
+							<li>iFrames</li>
+						</ul>
+					</section>
+					<section data-background-image="http://i.giphy.com/90F8aUepslB84.gif">
+						<ul style="background-color: rgba(0,0,0,0.7) color: #fff position: absolute right:0 !important">
+							<!-- <li>Colours</li>
+							<li>Images</li>
+							<li>Parallax</li>
+							<li>Video</li>
+							<li>iFrames</li> -->
+							<li>Gifs!!!</li>
+						</ul>
+					</section>
+				</section>
+				<section data-background-iframe="https://revealjs.com" data-background-interactive>
+
+				</section>
+				<section>
+					<section>
+						<div>
+							<h2>Responsive design built-in</h2>
+							<p>Reveal.js automatically scales presentation for a given viewport</p>
+						</div>
+						<div class="fragment fade-left">
+							<p>+</p>
+						</div>
+						<div class="fragment">
+							<h2>Touch optimized</h2>
+							<p>Swipe through the presentation on any touch-enabled device</p>
+						</div>
+						<div class="fragment fade-right">
+							<p>=</p>
+						</div>
+					</section>
+					<section>
+						<p>Presentations that look great and function well on desktop, laptop, tablets and mobile phones</p>
+					</section>
+
+				</section>
+
+				<section>
+					<h2>More you say?</h2>
+					<ul>
+						<li>Built-in Themes</li>
+						<li>Export to PDF</li>
+						<li>Right-to-left support</li>
+						<li>Auto slide progression</li>
+						<li>Pausing slides during presentation</li>
+						<li>Quotes</li>
+						<li>Tables</li>
+						<li>Custom events and key binding</li>
+						<li><a href="#/6/3">Internal linking between slides</a></li>
+					</ul>
+				</section>
+				<section>
+					<h1>The End</h1>
+					<p>Code and Docs: https://github.com/hakimel/reveal.js</p>
+					<p>Online editor: https://slides.com</p>
+				</section>
+			</div>
+		</div>
+
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true }
+				],
+				// Parallax background image
+				parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg', // e.g. "https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg"
+
+				// Parallax background size
+				parallaxBackgroundSize: '2100px 900px', // CSS syntax, e.g. "2100px 900px" - currently only pixels are supported (don't use % or auto)
+			});
+		</script>
+	</body>
+</html>
