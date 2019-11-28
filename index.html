@@ -72,7 +72,7 @@
 					</p> -->
 					<p>
 						<span class="fragment highlight-red" data-fragment-index="5">in</span>
-						<span class="fragment highlight-blue" data-fragment-index="6">de</span>
+						<span class="fragment highlight-green" data-fragment-index="6">de</span>
 						<span class="fragment highlight-blue" data-fragment-index="4">pendently</span>
 					</p>
 				</section>
@@ -120,8 +120,8 @@
 							<li>Parallax</li>
 						</ul>
 					</section>
-					<section data-background="#000000" data-background-video="https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.webm" data-background-video-loop data-background-video-mute data-background-size="contain" data-autoplay>
-						<ul style="background-color: rgba(0,0,0,0.7) color: #fff position: absolute right:0">
+					<section data-background="#000000" data-background-video="http://www.nicholasmckenzie.com/IMG-2734edit.mov" data-background-video-loop data-background-video-muted data-background-size="contain" data-autoplay>
+						<ul style="background-color: rgba(0,0,0,0.7); color: #fff; position: absolute; bottom: 0; right: 0; padding: 20px 50px 20px 90px;">
 							<!-- <li>Colours</li>
 							<li>Images</li>
 							<li>Parallax</li> -->
@@ -129,7 +129,7 @@
 						</ul>
 					</section>
 					<section data-background-iframe="https://save-whales.com" data-background-interactive>
-						<ul style="background-color: rgba(0,0,0,0.7) color: #fff position: absolute right:0">
+						<ul style="background-color: rgba(0,0,0,0.7); color: #fff; position: absolute; bottom: -500px; right:0; padding: 20px 50px 20px 90px">
 							<!-- <li>Colours</li>
 							<li>Images</li>
 							<li>Parallax</li>
@@ -138,7 +138,7 @@
 						</ul>
 					</section>
 					<section data-background-image="http://i.giphy.com/90F8aUepslB84.gif">
-						<ul style="background-color: rgba(0,0,0,0.7) color: #fff position: absolute right:0 !important">
+						<ul style="position: absolute; right:0">
 							<!-- <li>Colours</li>
 							<li>Images</li>
 							<li>Parallax</li>
@@ -148,11 +148,18 @@
 						</ul>
 					</section>
 				</section>
-				<section data-background-iframe="https://revealjs.com" data-background-interactive>
-
+				<section>
+					<h2>Presenter view</h2>
+					<p class="fragment">- Opens a separate browser window</p>
+					<p class="fragment">- Within this new window, we have access to:</p>
+					<ul>
+						<li class="fragment">Speaker notes</li>
+						<li class="fragment">Timer</li>
+						<li class="fragment">Preview of next slide</li>
+					</ul>
 				</section>
 				<section>
-					<section>
+					<section data-transition="slide-in-then-fade-out">
 						<div>
 							<h2>Responsive design built-in</h2>
 							<p>Reveal.js automatically scales presentation for a given viewport</p>
@@ -168,7 +175,7 @@
 							<p>=</p>
 						</div>
 					</section>
-					<section>
+					<section data-transition="zoom">
 						<p>Presentations that look great and function well on desktop, laptop, tablets and mobile phones</p>
 					</section>
 
@@ -214,6 +221,22 @@
 
 				// Parallax background size
 				parallaxBackgroundSize: '2100px 900px', // CSS syntax, e.g. "2100px 900px" - currently only pixels are supported (don't use % or auto)
+
+				// Global override for autoplaying embedded media (video/audio/iframe)
+				// - null: Media will only autoplay if data-autoplay is present
+				// - true: All media will autoplay, regardless of individual setting
+				// - false: No media will autoplay, regardless of individual setting
+				autoPlayMedia: null,
+
+				// Global override for preloading lazy-loaded iframes
+				// - null: Iframes with data-src AND data-preload will be loaded when within
+				//   the viewDistance, iframes with only data-src will be loaded when visible
+				// - true: All iframes with data-src will be loaded when within the viewDistance
+				// - false: All iframes with data-src will be loaded only when visible
+				preloadIframes: true,
+
+				// Number of slides away from the current that are visible
+				viewDistance: 3,
 			});
 		</script>
 	</body>
