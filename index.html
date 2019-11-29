@@ -32,17 +32,25 @@
 					<h2>What is it?</h2>
 					<p>A Javascript framework for building presentations</p>
 					<span class="fragment fade-down">
-						<img src="./test/assets/MJUC96rE_400x400.jpg" alt="">
+						<img src="./test/assets/MJUC96rE_400x400.jpg" alt="Black and white headshot of Hakim El Hattab">
 						<p>Hakim El Hattab</p>
 					</span>
 				</section>
 				<section>
-						<h3>So?</h3>
-						<ul>
-							<li class="fragment fade-right">Interactive presentations built using HTML</li>
-							<li class="fragment fade-right">Lots of built-in styling options, added simply via JS</li>
-							<li class="fragment fade-right">No web-dev skills? No problemo! <span class="fragment">Visual editor available at <a href="https://slides.com">https://slides.com</a></span></li>
-						</ul>
+					<h3>So?</h3>
+					<ul>
+						<li class="fragment fade-right">Interactive presentations built using HTML</li>
+						<li class="fragment fade-right">Lots of built-in styling options, added simply via HTML classes and configured via JS</li>
+						<li class="fragment fade-right">No web-dev skills? No problemo! <span class="fragment">Visual editor available at <a href="https://slides.com">https://slides.com</a></span></li>
+					</ul>
+				</section>
+				<section>
+					<h3>Code examples</h3>
+					<img src="./test/assets/code_screenshot_1.png" alt="Screenshot of reveal.js html code structure">
+				</section>
+				<section>
+					<h3>Code examples</h3>
+					<img src="./test/assets/code_screenshot_2.png" alt="Screenshot of reveal.js javascript customization">
 				</section>
 				<section>
 					<h2>Fragments</h2>
@@ -67,9 +75,6 @@
 					<p class="fragment shrink" data-fragment-index="1">styled</p>
 					<p class="fragment fade-in-then-semi-out" data-fragment-index="2">and</p>
 					<p class="fragment fade-left" data-fragment-index="3">ordered</p>
-					<!-- <p class="fragment fade-up" >
-						<span class="fragment fade-right" data-fragment-index="3">ordered</span>
-					</p> -->
 					<p>
 						<span class="fragment highlight-red" data-fragment-index="5">in</span>
 						<span class="fragment highlight-green" data-fragment-index="6">de</span>
@@ -157,6 +162,7 @@
 						<li class="fragment">Timer</li>
 						<li class="fragment">Preview of next slide</li>
 					</ul>
+					<aside class="notes">Nick, you're kicking ass and you sexy af. Keep up the great work!</aside>
 				</section>
 				<section>
 					<section data-transition="slide-in-then-fade-out">
@@ -192,7 +198,7 @@
 						<li>Quotes</li>
 						<li>Tables</li>
 						<li>Custom events and key binding</li>
-						<li><a href="#/6/3">Internal linking between slides</a></li>
+						<li><a href="#/8/3">Internal linking between slides</a></li>
 					</ul>
 				</section>
 				<section>
@@ -217,22 +223,15 @@
 					{ src: 'plugin/highlight/highlight.js', async: true }
 				],
 				// Parallax background image
-				parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg', // e.g. "https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg"
+				parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
 
 				// Parallax background size
-				parallaxBackgroundSize: '2100px 900px', // CSS syntax, e.g. "2100px 900px" - currently only pixels are supported (don't use % or auto)
+				parallaxBackgroundSize: '2100px 900px',
 
 				// Global override for autoplaying embedded media (video/audio/iframe)
-				// - null: Media will only autoplay if data-autoplay is present
-				// - true: All media will autoplay, regardless of individual setting
-				// - false: No media will autoplay, regardless of individual setting
 				autoPlayMedia: null,
 
 				// Global override for preloading lazy-loaded iframes
-				// - null: Iframes with data-src AND data-preload will be loaded when within
-				//   the viewDistance, iframes with only data-src will be loaded when visible
-				// - true: All iframes with data-src will be loaded when within the viewDistance
-				// - false: All iframes with data-src will be loaded only when visible
 				preloadIframes: true,
 
 				// Number of slides away from the current that are visible
